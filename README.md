@@ -1,20 +1,18 @@
-# streamlit-heroku-template
-Template to create ML apps using Streamlit and deploy it on Heroku.
-Should work nicely and easily. Just click [Use this Template](https://github.com/patryk-oleniuk/streamlit-heroku-template/generate) button on the top-right and name your app.
+# Written Digit Recognition using Convolutional Neural Networks on the MNIST Dataset
 
-Detailed tutorial available in Towards Data Science:
 
-[Show your ML Project to the Internet in Minutes](https://towardsdatascience.com/show-your-ml-project-to-the-internet-in-minutes-2a7bc3167bd0)
 
-Instruction for a quick run:
-1. Use this template, change the name to yours.
-2. (can skip this step if you just wanna deploy my dummy app for now) Develop your streamlit app in `app/streamlit_app.py`. Try locally using `streamlit run app/streamlit_app.py`. Remembers to adjust `requirements.txt` with your required python packages and python version in `runtime.txt`.
-3. Deploy to Heroku by connecting this repo to you Heroku project. It should recognize everything automatically and just deploy to `https://yourname.herokuapp.com` for free (if you selected free tier).
+MNIST (Modified National Institute of Standards and Technology) is a well-known dataset used in Computer Vision that was built by Yann Le Cun et. al. It is composed of images that are handwritten digits (0-9), split into a training set of 50,000 images and a test set of 10,000 where each image is of 28 x 28 pixels in width and height.
 
-This template app is currently automatically deployed to 
-https://streamlit-heroku-template.herokuapp.com/
-(you can deploy your version just with the different app name)
+This dataset is often used for practicing any algorithm made for image classification as the dataset is fairly easy to conquer. In this project I built a convolutional neural network using Keras which achieves 99.8% accuracy on the dataset and used streamlit and heroku to deploy the model.
+
+Web interface to test the app: 
+
+https://mnist-cnn-lv.herokuapp.com
+
 
 # References
 - Streamlit : https://www.streamlit.io/ 
 - Deploying the app on Heroku: https://towardsdatascience.com/deploy-streamlit-on-heroku-9c87798d2088
+- Show your ML Project to the Internet in Minute: https://towardsdatascience.com/show-your-ml-project-to-the-internet-in-minutes-2a7bc3167bd0
+- Super easy to use template: https://github.com/patryk-oleniuk/streamlit-heroku-template/generate (just click the button on the top-right and name your app)

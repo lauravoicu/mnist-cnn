@@ -7,7 +7,7 @@ import pandas as pd
 import streamlit as st
 import random
 
-st.title("Streamlit <-> Heroku MNIST CNN App")
+st.title("Written Digit Recognition App")
 
 # load mnist dataset, test set
 (_, _), (x_test, y_test) = mnist.load_data()
