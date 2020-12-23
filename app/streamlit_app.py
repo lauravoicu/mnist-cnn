@@ -7,13 +7,20 @@ import pandas as pd
 import streamlit as st
 import random
 
-st.title("Streamlit <-> Heroku Template App")
+st.title("Streamlit <-> Heroku MNIST CNN App")
 
 # load mnist dataset, test set
 (_, _), (x_test, y_test) = mnist.load_data()
 
 # load model from file
-model = keras.models.load_model(os.path.join("mlmodels", "mnist_model1"))
+model_list = os.listdir("mlmodels")
+
+model_path = st.sidebar.selectbox(
+    "Select ML model:", tuple(model_list)
+)
+
+model = keras.models.load_model(os.path.join("mlmodels", model_path))
+
 
 # if button clicked, classify
 if st.button("Get Next Random Digit"):
